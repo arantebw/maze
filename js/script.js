@@ -23,3 +23,7 @@ const walls = [
   Bodies.rectangle(0, height / 2, 40, height, { isStatic: true }) // left
 ];
 World.add(world, walls);
+
+// Generate Maze
+const grid = Array(3).fill(null).map(() => Array(3).fill(false));
+console.log(grid);
