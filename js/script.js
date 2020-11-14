@@ -189,6 +189,7 @@ Events.on(engine, 'collisionStart', event => {
   event.pairs.forEach(collision => {
     const labels = ['ball', 'goal'];
     if (labels.includes(collision.bodyA.label) && labels.includes(collision.bodyB.label)) {
+      document.querySelector('h1').removeAttribute('hidden');
       world.gravity.y = 1;
       world.bodies.forEach(body => {
         if (body.label === 'wall') {
